@@ -34,7 +34,7 @@ void ailee::LinkedList::PrintList(ailee::ListNode *pHead) {
     ListNode *pNode = pHead;
 
     while (pNode != nullptr) {
-        std::cout << pNode->m_nValue << "\t";
+        std::cout << pNode->m_nValue << " ";
         pNode = pNode->m_pNext;
     }
 
@@ -61,7 +61,7 @@ void ailee::LinkedList::Add2Tail(ailee::ListNode **pHead, int value) {
         *pHead = pNew;
     } else {
         ListNode *pNode = *pHead;
-        while (pNode != nullptr) {
+        while (pNode->m_pNext != nullptr) {
             pNode = pNode->m_pNext;
         }
 
@@ -83,7 +83,16 @@ void ailee::LinkedList::RemoveNode(ailee::ListNode **pHead, int value) {
         while (pNode->m_pNext != nullptr && pNode->m_pNext->m_nValue != value) {
             pNode = pNode->m_pNext;
         }
+
+        if (pNode->m_pNext != nullptr && pNode->m_pNext->m_nValue == value) {
+            pToBeDeleted = pNode->m_pNext;
+            pNode->m_pNext = pNode->m_pNext->m_pNext;
+        }
     }
 
+    if (pToBeDeleted != nullptr) {
+        delete pToBeDeleted;
+        pToBeDeleted = nullptr;
+    }
 
 }

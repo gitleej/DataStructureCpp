@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 11)
 include_directories(${CMAKE_SOURCE_DIR}/Utilities/include/)
 aux_source_directory(${CMAKE_SOURCE_DIR}/Utilities/src/ UTILITIES_SRC_LIST)
 
+add_subdirectory(./List)
+
 add_executable(DataStructureCpp main.cpp ${UTILITIES_SRC_LIST})
