@@ -57,7 +57,14 @@ namespace ailee {
          * @param pHead the head pointer of linked list.
          * @param value the value of the node that wanted to add to the end of the linked list.
          */
-        static void Add2Tail(ListNode* pHead, int value);
+        static void Add2Tail(ListNode** pHead, int value);
+
+        /**
+         * @brief   remove target node from linked list.
+         * @param pHead the head pointer of linked list.
+         * @param value the value of the node that wanted to remove from the end of the linked list.
+         */
+        static void RemoveNode(ListNode** pHead, int value);
     };
 }
 
