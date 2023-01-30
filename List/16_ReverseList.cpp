@@ -9,6 +9,11 @@
 #include <iostream>
 #include <vector>
 
+/**
+ * @brief reverse list
+ * @param pHead the input list head pointer
+ * @return the head pointer of reversed lit
+ */
 ailee::ListNode *ReverseList(ailee::ListNode *pHead) {
     ailee::ListNode *pReverseListHead = new ailee::ListNode();
 
