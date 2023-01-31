@@ -74,6 +74,12 @@ namespace ailee {
          * @param value the value of the node that wanted to remove from the end of the linked list.
          */
         static void RemoveNode(ListNode** pHead, int value);
+
+        /**
+         * @brief create linked list from console input.
+         * @return the head of linked list.
+         */
+        static ListNode* CreateLinkedList();
     };
 
     /**

@@ -5,6 +5,7 @@
 #include "LinkedList.h"
 
 #include <iostream>
+#include <vector>
 
 ailee::ListNode *ailee::LinkedList::CreateListNode(int value) {
     ailee::ListNode *pNode = new ListNode();
@@ -95,6 +96,24 @@ void ailee::LinkedList::RemoveNode(ailee::ListNode **pHead, int value) {
         pToBeDeleted = nullptr;
     }
 
+}
+
+ailee::ListNode *ailee::LinkedList::CreateLinkedList() {
+    std::vector<int> array;
+    for (int i = 0; std::cin>>i;) {
+        array.push_back(i);
+        if (std::cin.get() == '\n') {
+            break;
+        }
+    }
+
+    ailee::ListNode *pHead = new ailee::ListNode();
+    pHead = nullptr;
+    for (auto &it : array) {
+        ailee::LinkedList::Add2Tail(&pHead, it);
+    }
+
+    return pHead;
 }
 
 ailee::ComplexListNode *ailee::ComplexList::CreateComplexListNode(int value) {
