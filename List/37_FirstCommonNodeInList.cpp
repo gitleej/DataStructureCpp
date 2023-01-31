@@ -96,6 +96,9 @@ void addCommonNode2List(ailee::ListNode *pHead, std::vector<int> &commonArray) {
     }
 }
 
+/**
+ * @brief 普通情况测试
+ */
 void test_01() {
     ailee::ListNode *pHeadA = createLinkedList();
     ailee::ListNode *pHeadB = createLinkedList();
@@ -115,8 +118,27 @@ void test_01() {
     test("test 01", pHeadA, pHeadB);
 }
 
+/**
+ * @brief 没有公共节点
+ */
+void test_02() {
+    ailee::ListNode *pHeadA = createLinkedList();
+    ailee::ListNode *pHeadB = createLinkedList();
+
+    test("test 02", pHeadA, pHeadB);
+}
+
+/**
+ * @brief 空指针
+ */
+void test_03() {
+    test("test 03", nullptr, nullptr);
+}
+
 int main(int argc, char **argv) {
     test_01();
+    test_02();
+    test_03();
 
     return 0;
 }
