@@ -16,6 +16,15 @@ namespace ailee {
     } ListNode;
 
     /**
+     * @brief   define complex list node data struct.
+     */
+    typedef struct ComplexListNodeType {
+        int                     m_nValue;
+        ComplexListNodeType     *m_pNext;
+        ComplexListNodeType     *m_pSibling;
+    } ComplexListNode;
+
+    /**
      * @brief   define linked list class
      */
     class LinkedList {
