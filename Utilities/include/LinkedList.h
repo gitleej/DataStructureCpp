@@ -75,6 +75,33 @@ namespace ailee {
          */
         static void RemoveNode(ListNode** pHead, int value);
     };
+
+    /**
+     * @brief   define complex list class.
+     */
+    class ComplexList {
+    public:
+        /**
+         * @brief   create complex list node.
+         * @param value the value of node.
+         * @return the complex list node.
+         */
+        static ComplexListNode *CreateComplexListNode(int value);
+
+        /**
+         * @brief   connect complex list node.
+         * @param pNode the current complex list node pointer.
+         * @param pNext the next complex list node pointer.
+         * @param pSibling the sibling complex list node pointer.
+         */
+        static void ConnectComplexListNode(ComplexListNode *pNode, ComplexListNode *pNext, ComplexListNode *pSibling);
+
+        /**
+         * @brief   print complex list.
+         * @param pHead the head pointer of complex list.
+         */
+        static void PrintComplexList(ComplexListNode *pHead);
+    };
 }
 
 

@@ -96,3 +96,34 @@ void ailee::LinkedList::RemoveNode(ailee::ListNode **pHead, int value) {
     }
 
 }
+
+ailee::ComplexListNode *ailee::ComplexList::CreateComplexListNode(int value) {
+    ComplexListNode *pNode = new ComplexListNode();
+
+    pNode->m_nValue = value;
+    pNode->m_pNext = nullptr;
+    pNode->m_pSibling = nullptr;
+
+    return pNode;
+}
+
+void ailee::ComplexList::ConnectComplexListNode(ailee::ComplexListNode *pNode, ailee::ComplexListNode *pNext,
+                                                ailee::ComplexListNode *pSibling) {
+    pNode->m_pNext = pNext;
+    pNode->m_pSibling = pSibling;
+}
+
+void ailee::ComplexList::PrintComplexList(ailee::ComplexListNode *pHead) {
+    ComplexListNode *pNode = pHead;
+
+    while (pNode != nullptr) {
+        std::cout << "the value of this node: " << pNode->m_nValue << std::endl;
+        if (pNode->m_pSibling == nullptr) {
+            std::cout << "this node does not have a sibling." << std::endl;
+        } else {
+            std::cout << "the value of its sibling: " << pNode->m_pSibling->m_nValue << std::endl;
+        }
+
+        pNode = pNode->m_pNext;
+    }
+}
