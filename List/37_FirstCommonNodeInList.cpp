@@ -54,7 +54,7 @@ ailee::ListNode *FirstCommonNodeInLists_Stack(ailee::ListNode *pHeadA, ailee::Li
             ailee::ListNode *pNodeA = stackA.top();
             ailee::ListNode *pNodeB = stackB.top();
             if (pNodeA->m_nValue == pNodeB->m_nValue) {
-                pCommonNode = pHeadA;
+                pCommonNode = pNodeA;
             }
 
             stackA.pop();
@@ -65,10 +65,67 @@ ailee::ListNode *FirstCommonNodeInLists_Stack(ailee::ListNode *pHeadA, ailee::Li
     return pCommonNode;
 }
 
+/**
+ * @brief 先遍历一次，获取链表长度，根据相同部分长度相同，长链表先向前走(n-m)步，然后一起遍历。时间复杂度O(n+m)，无需额外空间。
+ * @param pHeadA the head pointer of first list.
+ * @param pHeadB the head pointer of second list.
+ * @return the common node pointer.
+ */
+ailee::ListNode *FirstCommonNodeInLists_Best(ailee::ListNode *pHeadA, ailee::ListNode *pHeadB) {
+    ailee::ListNode *pCommonNode = new ailee::ListNode();
+    // check input data
+    if (pHeadA == nullptr || pHeadB == nullptr) {
+        pCommonNode = nullptr;
+    }
+
+    ailee::ListNode *pNodeA = pHeadA;
+    int lengthA = 0;
+    while (pNodeA != nullptr) {
+        lengthA++;
+        pNodeA = pNodeA->m_pNext;
+    }
+
+    ailee::ListNode *pNodeB = pHeadB;
+    int lengthB = 0;
+    while (pNodeB != nullptr) {
+        lengthB++;
+        pNodeB = pNodeB->m_pNext;
+    }
+
+    if (lengthA > lengthB) {
+        pNodeA = pHeadA;
+        pNodeB = pHeadB;
+        for (int i = 0; i < lengthA - lengthB; i++) {
+            pNodeA = pNodeA->m_pNext;
+        }
+    } else {
+        pNodeA = pHeadA;
+        pNodeB = pHeadB;
+        for (int i = 0; i < lengthB - lengthA; i++) {
+            pNodeB = pNodeB->m_pNext;
+        }
+    }
+    while (pNodeA != nullptr) {
+        if (pNodeA->m_nValue == pNodeB->m_nValue) {
+            pCommonNode = pNodeA;
+            break;
+        }
+        pNodeA = pNodeA->m_pNext;
+        pNodeB = pNodeB->m_pNext;
+    }
+
+    return pCommonNode;
+}
+
 void test(const char *testName, ailee::ListNode *pHeadA, ailee::ListNode *pHeadB) {
     std::cout << testName << std::endl;
 
+    std::cout << "stack" << std::endl;
     ailee::ListNode *pCommonNode = FirstCommonNodeInLists_Stack(pHeadA, pHeadB);
+    ailee::LinkedList::PrintListNode(pCommonNode);
+
+    std::cout << "best" << std::endl;
+    pCommonNode = FirstCommonNodeInLists_Best(pHeadA, pHeadB);
     ailee::LinkedList::PrintListNode(pCommonNode);
 }
 
