@@ -20,6 +20,7 @@ ailee::ListNode *FirstCommonNodeInLists_Stack(ailee::ListNode *pHeadA, ailee::Li
     ailee::ListNode *pCommonNode = new ailee::ListNode();
     if (pHeadA == nullptr || pHeadB == nullptr) {
         pCommonNode = nullptr;
+        return pCommonNode;
     }
 
     int lengthA = 0;
@@ -44,9 +45,10 @@ ailee::ListNode *FirstCommonNodeInLists_Stack(ailee::ListNode *pHeadA, ailee::Li
         while (!stackB.empty()) {
             ailee::ListNode *pNodeA = stackA.top();
             ailee::ListNode *pNodeB = stackB.top();
-            if (pNodeA->m_nValue == pNodeB->m_nValue) {
-                pCommonNode = pNodeA;
+            if (pNodeA->m_nValue != pNodeB->m_nValue) {
+                break;
             }
+            pCommonNode = pNodeA;
 
             stackA.pop();
             stackB.pop();
