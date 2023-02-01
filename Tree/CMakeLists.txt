@@ -1,1 +1,1 @@
-add_executable(07_ConstructBinaryTree 07_ConstructBinaryTree.cpp)
+add_executable(07_ConstructBinaryTree 07_ConstructBinaryTree.cpp ${UTILITIES_SRC_LIST})
