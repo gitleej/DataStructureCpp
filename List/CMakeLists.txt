@@ -5,3 +5,4 @@ add_executable(17_MergeSortedLists 17_MergeSortedLists.cpp ${UTILITIES_SRC_LIST}
 add_executable(26_CopyComplexList 26_CopyComplexList.cpp ${UTILITIES_SRC_LIST})
 add_executable(37_FirstCommonNodeInList 37_FirstCommonNodeInList.cpp ${UTILITIES_SRC_LIST})
 add_executable(23_EntryNodeInListLoop 23_EntryNodeInListLoop.cpp ${UTILITIES_SRC_LIST})
+add_executable(18_2_DeleteDuplicationNode 18_2_DeleteDuplicationNode.cpp ${UTILITIES_SRC_LIST})
