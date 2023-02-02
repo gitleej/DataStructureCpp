@@ -62,6 +62,7 @@ void ailee::BinaryTree::DestroyBinaryTree(ailee::BinaryTreeNode *pRoot) {
         BinaryTreeNode *pRight = pRoot->m_pRight;
 
         delete pRoot;
+        pRoot = nullptr;
 
         DestroyBinaryTree(pLeft);
         DestroyBinaryTree(pRight);
