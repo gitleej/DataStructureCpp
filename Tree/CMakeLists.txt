@@ -1,2 +1,3 @@
 add_executable(07_ConstructBinaryTree 07_ConstructBinaryTree.cpp ${UTILITIES_SRC_LIST})
 add_executable(08_NextNodeInBinaryTree 08_NextNodeInBinaryTree.cpp ${UTILITIES_SRC_LIST})
+add_executable(26_SubstructureInTree 26_SubstructureInTree.cpp ${UTILITIES_SRC_LIST})
