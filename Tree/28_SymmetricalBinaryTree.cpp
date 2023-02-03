@@ -126,6 +126,8 @@ void test(const char* testName, ailee::BinaryTreeNode* pRoot) {
     } else {
         cout << "this binary tree is not a symmetrical tree." << endl;
     }
+
+    ailee::BinaryTree::DestroyBinaryTree(pRoot);
 }
 
 /**

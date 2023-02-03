@@ -43,6 +43,8 @@ void test(const char* testName, ailee::BinaryTreeNode* pRoot) {
     cout << testName << endl;
 
     PrintBinaryTreeFromTop2Bottom(pRoot);
+
+    ailee::BinaryTree::DestroyBinaryTree(pRoot);
 }
 
 /**
