@@ -11,6 +11,10 @@
 
 using namespace std;
 
+/**
+ * @brief 用递归方式实现二叉树镜像，遍历方式采用先序遍历
+ * @param pRoot 二叉树的根节点
+ */
 void MirrorOfBinaryTreeRecursively(ailee::BinaryTreeNode* pRoot) {
     if (pRoot == nullptr) {
         return;
@@ -35,6 +39,10 @@ void MirrorOfBinaryTreeRecursively(ailee::BinaryTreeNode* pRoot) {
     }
 }
 
+/**
+ * @brief 用栈加循环方式实现二叉树镜像，遍历方式采用先序遍历
+ * @param pRoot 二叉树的根节点
+ */
 void MirrorOfBinaryTreeIteratively(ailee::BinaryTreeNode* pRoot) {
     if (pRoot == nullptr) {
         return;
