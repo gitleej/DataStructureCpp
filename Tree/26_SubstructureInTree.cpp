@@ -59,6 +59,9 @@ void test(const char* testName, ailee::BinaryTreeNode* pRootA, ailee::BinaryTree
     } else {
         cout << "Tree B is not in tree A" <<endl;
     }
+
+    ailee::BinaryTree::DestroyBinaryTree(pRootA);
+    ailee::BinaryTree::DestroyBinaryTree(pRootB);
 }
 
 /**
