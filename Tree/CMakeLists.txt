@@ -7,3 +7,4 @@ add_executable(32_01_PrintBinaryTreeFromTop2Bottom 32_01_PrintBinaryTreeFromTop2
 add_executable(32_02_PrintBinaryTreeInLines 32_02_PrintBinaryTreeInLines.cpp ${UTILITIES_SRC_LIST})
 add_executable(32_03_PrintBinaryTreesInZigzag 32_03_PrintBinaryTreesInZigzag.cpp ${UTILITIES_SRC_LIST})
 add_executable(34_PathSumInBinaryTree 34_PathSumInBinaryTree.cpp ${UTILITIES_SRC_LIST})
+add_executable(37_SerializeBinaryTree 37_SerializeBinaryTree.cpp ${UTILITIES_SRC_LIST})
