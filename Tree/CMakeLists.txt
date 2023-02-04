@@ -5,3 +5,4 @@ add_executable(27_MirrorOfBinaryTree 27_MirrorOfBinaryTree.cpp ${UTILITIES_SRC_L
 add_executable(28_SymmetricalBinaryTree 28_SymmetricalBinaryTree.cpp ${UTILITIES_SRC_LIST})
 add_executable(32_01_PrintBinaryTreeFromTop2Bottom 32_01_PrintBinaryTreeFromTop2Bottom.cpp ${UTILITIES_SRC_LIST})
 add_executable(32_02_PrintBinaryTreeInLines 32_02_PrintBinaryTreeInLines.cpp ${UTILITIES_SRC_LIST})
+add_executable(32_03_PrintBinaryTreesInZigzag 32_03_PrintBinaryTreesInZigzag.cpp ${UTILITIES_SRC_LIST})
