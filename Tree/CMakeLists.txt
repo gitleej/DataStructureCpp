@@ -6,3 +6,4 @@ add_executable(28_SymmetricalBinaryTree 28_SymmetricalBinaryTree.cpp ${UTILITIES
 add_executable(32_01_PrintBinaryTreeFromTop2Bottom 32_01_PrintBinaryTreeFromTop2Bottom.cpp ${UTILITIES_SRC_LIST})
 add_executable(32_02_PrintBinaryTreeInLines 32_02_PrintBinaryTreeInLines.cpp ${UTILITIES_SRC_LIST})
 add_executable(32_03_PrintBinaryTreesInZigzag 32_03_PrintBinaryTreesInZigzag.cpp ${UTILITIES_SRC_LIST})
+add_executable(34_PathSumInBinaryTree 34_PathSumInBinaryTree.cpp ${UTILITIES_SRC_LIST})
