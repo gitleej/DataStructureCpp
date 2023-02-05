@@ -81,7 +81,9 @@ void DeserializeBinaryTreeRecursively(ailee::BinaryTreeNode** pRoot, istream &st
         (*pRoot)->m_nValue = number;
         (*pRoot)->m_pLeft = nullptr;
         (*pRoot)->m_pRight = nullptr;
+        // 构建左节点
         DeserializeBinaryTreeRecursively(&((*pRoot)->m_pLeft), stream);
+        // 构建右节点
         DeserializeBinaryTreeRecursively(&((*pRoot)->m_pRight), stream);
     }
 }
