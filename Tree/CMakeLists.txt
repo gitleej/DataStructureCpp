@@ -9,3 +9,4 @@ add_executable(32_03_PrintBinaryTreesInZigzag 32_03_PrintBinaryTreesInZigzag.cpp
 add_executable(34_PathSumInBinaryTree 34_PathSumInBinaryTree.cpp ${UTILITIES_SRC_LIST})
 add_executable(37_SerializeBinaryTree 37_SerializeBinaryTree.cpp ${UTILITIES_SRC_LIST})
 add_executable(55_01_BinaryTreeDepth 55_01_BinaryTreeDepth.cpp ${UTILITIES_SRC_LIST})
+add_executable(55_02_BalancedBinaryTree 55_02_BalancedBinaryTree.cpp ${UTILITIES_SRC_LIST})
