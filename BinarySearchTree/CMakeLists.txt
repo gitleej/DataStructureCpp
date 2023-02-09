@@ -1,0 +1,1 @@
+add_executable(33_VerifySequenceOfBinarySearchTree 33_VerifySequenceOfBinarySearchTree.cpp ${UTILITIES_SRC_LIST})
