@@ -1,1 +1,2 @@
 add_executable(33_VerifySequenceOfBinarySearchTree 33_VerifySequenceOfBinarySearchTree.cpp ${UTILITIES_SRC_LIST})
+add_executable(36_ConvertBinarySearchTree2List 36_ConvertBinarySearchTree2List.cpp ${UTILITIES_SRC_LIST})
