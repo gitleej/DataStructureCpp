@@ -1,0 +1,3 @@
+add_executable(03_01_DuplicationInArray 03_01_DuplicationInArray.cpp ${UTILITIES_SRC_LIST})
+add_executable(03_02_DuplicationInArrayNoEdit 03_02_DuplicationInArrayNoEdit.cpp ${UTILITIES_SRC_LIST})
+add_executable(04_FindInPartiallySortedMatrix 04_FindInPartiallySortedMatrix.cpp ${UTILITIES_SRC_LIST})
