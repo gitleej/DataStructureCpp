@@ -2,3 +2,4 @@ add_executable(03_01_DuplicationInArray 03_01_DuplicationInArray.cpp ${UTILITIES
 add_executable(03_02_DuplicationInArrayNoEdit 03_02_DuplicationInArrayNoEdit.cpp ${UTILITIES_SRC_LIST})
 add_executable(04_FindInPartiallySortedMatrix 04_FindInPartiallySortedMatrix.cpp ${UTILITIES_SRC_LIST})
 add_executable(11_MinNumberInRotatedArray 11_MinNumberInRotatedArray.cpp ${UTILITIES_SRC_LIST})
+add_executable(21_ReorderArray 21_ReorderArray.cpp ${UTILITIES_SRC_LIST})
