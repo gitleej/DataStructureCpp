@@ -4,3 +4,4 @@ add_executable(04_FindInPartiallySortedMatrix 04_FindInPartiallySortedMatrix.cpp
 add_executable(11_MinNumberInRotatedArray 11_MinNumberInRotatedArray.cpp ${UTILITIES_SRC_LIST})
 add_executable(21_ReorderArray 21_ReorderArray.cpp ${UTILITIES_SRC_LIST})
 add_executable(39_MoreThanHalfNumberInArray 39_MoreThanHalfNumberInArray.cpp ${UTILITIES_SRC_LIST})
+add_executable(42_GreatestSumOfSubArrays 42_GreatestSumOfSubArrays.cpp ${UTILITIES_SRC_LIST})
