@@ -8,40 +8,53 @@
 
 using namespace std;
 
-int merger(int* array, int* arrayCopy, int left, int right) {
-    // 分解
-    if (left == right) {
-        return 0;
-    }
-
+int Merger(int* array, int* arrayCopy, int left, int right) {
     int middle = (left + right) / 2;
-    merger(array, arrayCopy, left, middle);
-    merger(array, arrayCopy, middle+1, right);
+    int i_start = left;
+    int i_end = middle;
+    int j_start = middle + 1;
+    int j_end = right;
 
-    // 合并
-    int i = left;
-    int j = middle + 1;
-    int k = right;
-    while (i < middle && j < right) {
-        if (array[i] < arrayCopy[j]) {
-            arrayCopy[k++] = array[i++];
+    int len = 0;
+    while (i_start <= i_end && j_start <= j_end) {
+        if (array[i_start] < array[j_start]) {
+            arrayCopy[len] = array[i_start];
+            len++;
+            i_start++;
         } else {
-            arrayCopy[k++] = array[j++];
+            arrayCopy[len] = array[j_start];
+            len++;
+            j_start++;
         }
     }
 
-    // 右侧无元素
-    while (i <= middle) {
-        arrayCopy[k++] = array[i++];
+    while (i_start <= i_end) {
+        arrayCopy[len] = array[i_start];
+        len++;
+        i_start++;
     }
 
-    // 左侧无元素
-    while (j <= right) {
-        arrayCopy[k++] = array[j++];
+    while (j_start <= j_end) {
+        arrayCopy[len] = array[j_start];
+        len++;
+        j_start++;
     }
 
-    for (int l = left; l < right; l++) {
-        array[l] = arrayCopy[l];
+    for (int i = 0; i < right - left + 1; i++) {
+        array[left + i] = arrayCopy[i];
+    }
+
+}
+
+int MergerSort(int* array, int* arrayCopy, int left, int right) {
+    // 分解
+    if (left < right) {
+        int middle = (left + right) / 2;
+        MergerSort(array, arrayCopy, left, middle);
+        MergerSort(array, arrayCopy, middle + 1, right);
+
+        // 合并
+        Merger(array, arrayCopy, left, right);
     }
 
     return 0;
@@ -57,7 +70,7 @@ int InversePairsInArray(int* array, int length) {
         arrayCopy[i] = array[i];
     }
 
-    int result = merger(array, array, 0, length - 1);
+    int result = MergerSort(array, arrayCopy, 0, length - 1);
 
     for (int i = 0; i < length; i++) {
         cout << array[i] << " ";
