@@ -9,3 +9,4 @@ add_executable(45_SortArrayForMinNumber 45_SortArrayForMinNumber.cpp ${UTILITIES
 add_executable(51_InversePairsInArray 51_InversePairsInArray.cpp ${UTILITIES_SRC_LIST})
 add_executable(56_01_NumbersAppearOnceInArray 56_01_NumbersAppearOnceInArray.cpp ${UTILITIES_SRC_LIST})
 add_executable(56_02_NumberAppearOnceInArray 56_02_NumberAppearOnceInArray.cpp ${UTILITIES_SRC_LIST})
+add_executable(66_ConstructProductArray 66_ConstructProductArray.cpp ${UTILITIES_SRC_LIST})
