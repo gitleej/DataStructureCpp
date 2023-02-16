@@ -71,6 +71,56 @@ void test_01() {
     test("test 01", str, pattern);
 }
 
+void test_02() {
+    string str = "aa";
+    string pattern = "a";
+
+    test("test 02", str, pattern);
+}
+
+void test_03() {
+    string str = "aa";
+    string pattern = "a*";
+
+    test("test 03", str, pattern);
+}
+
+void test_04() {
+    string str = "ab";
+    string pattern = ".*";
+
+    test("test 04", str, pattern);
+}
+
+void test_05() {
+    string str = "aab";
+    string pattern = "c*a*b";
+
+    test("test 05", str, pattern);
+}
+
+void test_06() {
+    string str = "mississippi";
+    string pattern = "mis*is*p*.";
+
+    test("test 06", str, pattern);
+}
+
+void test_07() {
+    string str = "aab";
+    string pattern = "*c*a*b";
+
+    test("test 07", str, pattern);
+}
+
 int main(int argc, char ** argv) {
+    test_01();
+    test_02();
+    test_03();
+    test_04();
+    test_05();
+    test_06();
+    test_07();
+
     return 0;
 }
