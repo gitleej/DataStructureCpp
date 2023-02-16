@@ -5,3 +5,4 @@ add_executable(58_01_ReverseWordsInSentence 58_01_ReverseWordsInSentence.cpp ${U
 add_executable(58_02_LeftRotateString 58_02_LeftRotateString.cpp ${UTILITIES_SRC_LIST})
 add_executable(67_String2Int 67_String2Int.cpp ${UTILITIES_SRC_LIST})
 add_executable(19_RegularExpressionsMatching 19_RegularExpressionsMatching.cpp ${UTILITIES_SRC_LIST})
+add_executable(20_NumericStrings 20_NumericStrings.cpp ${UTILITIES_SRC_LIST})
