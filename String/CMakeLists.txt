@@ -3,3 +3,4 @@ add_executable(38_StringPermutation 38_StringPermutation.cpp ${UTILITIES_SRC_LIS
 add_executable(50_01_FirstNotRepeatingChar 50_01_FirstNotRepeatingChar.cpp ${UTILITIES_SRC_LIST})
 add_executable(58_01_ReverseWordsInSentence 58_01_ReverseWordsInSentence.cpp ${UTILITIES_SRC_LIST})
 add_executable(58_02_LeftRotateString 58_02_LeftRotateString.cpp ${UTILITIES_SRC_LIST})
+add_executable(67_String2Int 67_String2Int.cpp ${UTILITIES_SRC_LIST})
