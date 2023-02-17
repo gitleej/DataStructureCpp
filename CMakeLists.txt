@@ -12,5 +12,6 @@ add_subdirectory(./BinarySearchTree)
 add_subdirectory(./Array)
 add_subdirectory(./String)
 add_subdirectory(./Stack)
+add_subdirectory(./Recursion)
 
 add_executable(DataStructureCpp main.cpp ${UTILITIES_SRC_LIST})
