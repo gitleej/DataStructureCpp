@@ -1,1 +1,2 @@
 add_executable(09_QueueWithTwoStacks 09_QueueWithTwoStacks.cpp)
+add_executable(30_StackWithMin 30_StackWithMin.cpp)
