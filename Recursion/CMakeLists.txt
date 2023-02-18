@@ -1,1 +1,2 @@
 add_executable(10_01_FibonacciSequence 10_01_FibonacciSequence.cpp)
+add_executable(10_02_JumpSteps 10_02_JumpSteps.cpp)
