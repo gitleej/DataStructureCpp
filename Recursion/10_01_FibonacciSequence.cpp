@@ -37,7 +37,7 @@ int FibonacciIteratively(int n) {
     int fi_2 = 0;
     int fi = 0;
     for (int i = 2; i <= n; ++i) {
-        fi = (fi_1 + fi_2) % (1e9+7);
+        fi = (fi_1 + fi_2) % (MOD);
         fi_2 = fi_1;
         fi_1 = fi;
     }
