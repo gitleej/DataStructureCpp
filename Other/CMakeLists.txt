@@ -1,1 +1,2 @@
 add_executable(12_PathInMatrix 12_PathInMatrix.cpp)
+add_executable(14_CuttingRope 14_CuttingRope.cpp)
