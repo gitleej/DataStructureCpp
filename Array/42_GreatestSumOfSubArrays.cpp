@@ -8,6 +8,35 @@
 
 using namespace std;
 
+/**
+ * @brief 动态规划
+ * @param array
+ * @param length
+ * @return
+ */
+int GreatestSumOfSubArray(int* array, int length) {
+    if (array == nullptr || length <= 0) {
+        throw logic_error("input data error");
+    }
+
+    int dp = array[0];
+    int maxDp = array[0];
+    for (int i = 1; i < length; i++) {
+        if (dp <= 0) {
+            dp = array[i];
+        } else {
+            dp = dp + array[i];
+        }
+
+        if (dp > maxDp) {
+            maxDp = dp;
+        }
+    }
+
+    return maxDp;
+}
+
+
 bool GreatestSumOfSubArray(int* array, int length, int* greatestSum) {
     if (array == nullptr || length <= 0) {
         return false;
@@ -39,6 +68,12 @@ void test(const char* testName, int* array, int length) {
         cout << greatestSum << endl;
     } else {
         cout << "please check input" << endl;
+    }
+
+    try {
+        cout << GreatestSumOfSubArray(array, length) << endl;
+    } catch (logic_error &error) {
+        cout << error.what() << endl;
     }
 }
 
